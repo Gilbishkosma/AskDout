@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="row">
+<div class="col-6">
+<div class="side">
+	<h1>AskQuery</h1>
+    <h4>We get wise by asking questions, <br>and even if these are not answered.</h4>
+	<p class="lead">
+	<a class="btn btn-primary btn-lg my-2" href="{% url 'question_list' %}" role="button">Ask questions</a>
+    </p>
+</div>
+</div>
+<div class="col my-4">
+<p class="mx-4"><img src="{% static 'img/logo.png' %}" class="img-fluid"></p>
+</div>
+</div>
+{% endblock %}

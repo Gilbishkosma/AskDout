@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row my-3">
+<div class="col-sm-10">
+<form class="form-inline">
+<input class="form-control" type="text" name="search"/>
+<input class="btn btn-primary mx-3" type="submit" value="Search" />
+</form>
+</div>
+<div class="col">
+{% if user.is_authenticated %}
+<a href="{% url 'question_new' %}" class="btn btn-success ml-2">+ Ask Question</a>	
+{% endif %}
+</div>
+</div>
+{% for question in object_list %}
+<div class="card">
+	<div class="card-body">
+    	<span class="font-weight-bold"><a href="{% url 'question_detail' question.id%}">{{question.title}}</a></span>&middot;<br>
+        <span class="text-muted">by <a href="{% url 'profile_detail' question.person.id%}">{{ question.person }} </a>| {{ question.date }} | {{question.person.id}}</span>
+        <hr>
+        {{question.body}}       
+    </div>
+    <div class="card-footer">
+        <p>Answers: {{question.comments.all.count}}  <a href="{% url 'question_detail' question.id %} ">(Click here to see all the Answers)</a></p>
+    </div>
+</div>
+<br/>
+{% endfor %}
+{% endblock %}

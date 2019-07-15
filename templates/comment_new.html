@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Comment</h2>
+<h1>{{object.title}}</h1>
+<form method="post">
+{% csrf_token %}
+{{form.as_p}}
+<button class="btn btn-info ml-2" type="submit">Comment</button>
+</form>
+{% endblock %}

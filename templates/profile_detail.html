@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+<!-- <div class="article-entry">
+<h2>{{object.user}}</h2>
+<p>by {{object.Bio}}</p>
+<p>by {{object.Education_qualification}}</p>
+<p>by {{object.age}}</p>
+<p><img src="/media/{{object.image}}" class="img-fluid"></p>
+{% if object.user == request.user %}
+<a class="btn btn-success" href="{% url 'profile_update' object.id %}">Profile Update</a>
+{% endif %}
+</div> -->
+<div class="heading">
+<h2>AskQuery</h2>
+<p>We get wise by asking questions, and even if these are not answered.</p>
+</div>
+<div class="name">
+<h2>{{object.user}}</h2>
+<p>{{object.Bio}}</p>
+</div>
+<div class="row my-3">
+<div class="col-sm-6">
+<h1>General info</h1>
+<table>
+<tr>
+<td>Education</td><td>{{object.Education_qualification}}</td></tr>
+<tr>
+<td>E-mail</td><td>{{object.email}}</td></tr>
+<tr><td>Age</td><td>{{object.age}}</td></tr>
+</table>
+</div>
+<div class="col">
+<p><img src="/media/{{object.image}}" class="img-fluid" style="max-height: 600px; max-width: 400px;"></p>
+</div>
+</div>
+{% endblock %}
