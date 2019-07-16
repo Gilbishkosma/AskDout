@@ -65,7 +65,7 @@ class QuestionDeleteView(LoginRequiredMixin,DeleteView):
 class QuestionCreateView(LoginRequiredMixin,CreateView):
    model = Question
    template_name = 'question_new.html'
-   fields = ['title','body','image']
+   fields = ['title','body']
    login_url = 'login'
 
    def form_valid(self,form): #if form is valid

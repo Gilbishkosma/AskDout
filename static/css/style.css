@@ -1,9 +1,25 @@
 .heading{
 	margin-top: 30px;
-	margin-bottom:200px;	
+	margin-bottom:50px;	
 }
 
 .side{
-	margin-top:250px;
+	margin-top:150px;
 	margin-bottom: 100px;
+}
+
+
+#footer {
+    position: fixed;
+    height: 50px;
+    background-color: red;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+
+body {
+    margin-bottom:50px;
 }

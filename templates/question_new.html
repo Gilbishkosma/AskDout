@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<h2>New Article</h2>
+<h2>New Question</h2>
 <form method="post" enctype="multipart/form-data">
 {% csrf_token %}
 {{form|crispy}}
