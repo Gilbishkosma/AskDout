@@ -39,8 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ask',
     'users',
+    'django_private_chat',
     'crispy_forms',
 ]
+
+
+CHAT_WS_SERVER_HOST = 'localhost'
+CHAT_WS_SERVER_PORT = 5002
+CHAT_WS_SERVER_PROTOCOL = 'ws'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -118,10 +124,11 @@ USE_TZ = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'gilbeesh'
-EMAIL_HOST_PASSWORD = '*********'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'gilbish@gil20.me'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

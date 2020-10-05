@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
+from django_private_chat import urls as django_private_chat_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('ask.urls')),
+    path('chat/',include('django_private_chat.urls')),
     path('users/',include('users.urls')), #for  user app
     path('users/',include('django.contrib.auth.urls')), #for inbuilt user module
+    path('',include('ask.urls')),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

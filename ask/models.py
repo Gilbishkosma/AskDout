@@ -36,3 +36,12 @@ class Profile(models.Model):
           return '{} yo '.format(self.Bio);
      def get_absolute_url(self):
           return reverse('profile_detail',args=[str(self.id)])
+
+
+class Values(models.Model):
+     abc = models.CharField(max_length=10)
+
+class Stack(models.Model):
+     user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,related_name='stackuser')
+     values = models.ForeignKey(Values,on_delete=models.CASCADE,related_name='valuess')
+     text = models.CharField(max_length=20)
