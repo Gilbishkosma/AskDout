@@ -132,7 +132,7 @@ DEFAULT_FROM_EMAIL = 'gilbish@gil20.me'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.CustomUser' #Accounts is the default user model that's why we have to tell that users.CustomUser will be auth_user_model
