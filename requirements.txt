@@ -1,5 +1,5 @@
 django
 django-crispy-forms
-websockets==7.0
+websockets==9.1
 pillow
 
